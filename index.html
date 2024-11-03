@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Libraries Recommendation</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Lottie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- LazyLoad -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.5.1/dist/lazyload.min.js"></script>
+
+  <!-- Howler.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
+  <!-- Lightbox2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+    .section {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px 0;
+    }
+    #lottie-animation {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 200px;
+    }
+    #typed-output {
+      font-size: 1.25rem;
+      color: #495057;
+    }
+    #particles-js {
+      width: 100%;
+      height: 200px;
+      background-color: #343a40;
+    }
+    #animated-box {
+      width: 100px;
+      height: 100px;
+      background: coral;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-4">
+    <h1 class="text-center text-primary mb-5">JavaScript Libraries Recommendation</h1>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="list-group" id="libraryMenu">
+          <a class="list-group-item list-group-item-action" href="#aosSection">AOS</a>
+          <a class="list-group-item list-group-item-action" href="#lottieSection">Lottie</a>
+          <a class="list-group-item list-group-item-action" href="#chartSection">Chart.js</a>
+          <a class="list-group-item list-group-item-action" href="#lazyloadSection">LazyLoad</a>
+          <a class="list-group-item list-group-item-action" href="#howlerSection">Howler.js</a>
+          <a class="list-group-item list-group-item-action" href="#swiperSection">Swiper</a>
+          <a class="list-group-item list-group-item-action" href="#typedSection">Typed.js</a>
+          <a class="list-group-item list-group-item-action" href="#particlesSection">Particles.js</a>
+          <a class="list-group-item list-group-item-action" href="#gsapSection">GSAP</a>
+          <a class="list-group-item list-group-item-action" href="#lightboxSection">Lightbox2</a>
+        </div>
+      </div>
+      
+      <div class="col-md-8">
+        
+        <!-- AOS Section -->
+        <div class="section" id="aosSection" data-aos="fade-up">
+          <h2 class="section-title">AOS (Animate on Scroll)</h2>
+          <a href="https://michalsnik.github.io/aos/" target="_blank">Official Website</a>
+          <p>This text appears with a fade-up effect on scroll.</p>
+        </div>
+
+        <!-- Lottie Section -->
+        <div class="section text-center" id="lottieSection">
+          <h2 class="section-title">Lottie Animation</h2>
+          <a href="https://airbnb.design/lottie/" target="_blank">Official Website</a>
+          <div id="lottie-animation"></div>
+        </div>
+
+        <!-- Chart.js Section -->
+        <div class="section" id="chartSection">
+          <h2 class="section-title">Chart.js</h2>
+          <a href="https://www.chartjs.org/" target="_blank">Official Website</a>
+          <canvas id="chart" width="400" height="200"></canvas>
+        </div>
+
+        <!-- LazyLoad Section -->
+        <div class="section" id="lazyloadSection">
+          <h2 class="section-title">LazyLoad Image</h2>
+          <a href="https://www.andreaverlicchi.eu/vanilla-lazyload/" target="_blank">Official Website</a>
+          <p>This image below is lazy-loaded:</p>
+          <img data-src="https://via.placeholder.com/400x200" class="lazyload img-fluid rounded" alt="Lazy Loaded Image">
+        </div>
+
+        <!-- Howler.js Section -->
+        <div class="section text-center" id="howlerSection">
+          <h2 class="section-title">Howler.js (Text-to-Speech)</h2>
+          <a href="https://howlerjs.com/" target="_blank">Official Website</a>
+          <button class="btn btn-primary" onclick="playSound()">Play Sound</button>
+        </div>
+
+        <!-- Swiper Section -->
+        <div class="section" id="swiperSection">
+          <h2 class="section-title">Swiper Carousel</h2>
+          <a href="https://swiperjs.com/" target="_blank">Official Website</a>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bg-primary text-white text-center d-flex align-items-center justify-content-center">Slide 1</div>
+              <div class="swiper-slide bg-secondary text-white text-center d-flex align-items-center justify-content-center">Slide 2</div>
+              <div class="swiper-slide bg-success text-white text-center d-flex align-items-center justify-content-center">Slide 3</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typed.js Section -->
+        <div class="section" id="typedSection">
+          <h2 class="section-title">Typed.js</h2>
+          <a href="https://mattboldt.com/demos/typed-js/" target="_blank">Official Website</a>
+          <div id="typed-output" class="text-center"></div>
+        </div>
+
+        <!-- Particles.js Section -->
+        <div class="section" id="particlesSection">
+          <h2 class="section-title">Particles.js Background</h2>
+          <a href="https://vincentgarreau.com/particles.js/" target="_blank">Official Website</a>
+          <div id="particles-js"></div>
+        </div>
+
+        <!-- GSAP Section -->
+        <div class="section text-center" id="gsapSection">
+          <h2 class="section-title">GSAP Animation</h2>
+          <a href="https://greensock.com/gsap/" target="_blank">Official Website</a>
+          <div id="animated-box"></div>
+        </div>
+
+        <!-- Lightbox2 Section -->
+        <div class="section text-center" id="lightboxSection">
+          <h2 class="section-title">Lightbox2</h2>
+          <a href="https://lokeshdhakar.com/projects/lightbox2/" target="_blank">Official Website</a>
+          <a href="https://via.placeholder.com/800x400" data-lightbox="example" data-title="Lightbox Example">
+            <img src="https://via.placeholder.com/400x200" class="img-fluid rounded" alt="Thumbnail">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Initialization Scripts -->
+  <script>
+    // AOS
+    AOS.init();
+
+    // Lottie Animation
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets2.lottiefiles.com/packages/lf20_cacxgflr.json'
+    });
+
+    // Chart.js
+    new Chart(document.getElementById('chart'), {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Howler.js
+    function playSound() {
+      var sound = new Howl({
+        src: ['https://www.soundjay.com/button/sounds/button-09.mp3']
+      });
+      sound.play();
+    }
+
+    // Swiper Carousel
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+
+    // Typed.js
+    new Typed('#typed-output', {
+      strings: ["Hello!", "Welcome to the JavaScript Libraries Demo!", "Explore more below!"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+
+    // Particles.js
+    particlesJS.load('particles-js', 'https://vincentgarreau.com/particles.js/assets/particles.json');
+
+    // GSAP Animation
+    gsap.to("#animated-box", {
+      duration: 2, 
+      x: 100, 
+      rotation: 360, 
+      repeat: -1, 
+      yoyo: true 
+    });
+  </script>
+
+</body>
+</html>
